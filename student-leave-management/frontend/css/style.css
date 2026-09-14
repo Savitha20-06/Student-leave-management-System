@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.topbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topbar h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.topbar nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.topbar nav a.active,
+.topbar nav a:hover {
+  background: #34495e;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #34495e;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.inline-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+table th {
+  background: #f0f2f5;
+}
+
+.status-PENDING { color: #e67e22; font-weight: bold; }
+.status-APPROVED { color: #27ae60; font-weight: bold; }
+.status-REJECTED { color: #c0392b; font-weight: bold; }
+
+.action-btn {
+  margin: 0 4px 4px 0;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.approve-btn { background: #27ae60; }
+.approve-btn:hover { background: #1e8449; }
+
+.reject-btn { background: #c0392b; }
+.reject-btn:hover { background: #922b21; }
+
+.delete-btn { background: #7f8c8d; }
+.delete-btn:hover { background: #636e72; }
+
+#formMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}

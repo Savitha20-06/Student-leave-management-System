@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin - Student Leave Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Student Leave Management System</h1>
+    <nav>
+      <a href="index.html">Student</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>All Leave Requests</h2>
+      <button id="refreshBtn">Refresh</button>
+
+      <table id="leavesTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Roll No</th>
+            <th>Department</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="leavesBody">
+          <!-- filled by JS -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Leave Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Student Leave Management System</h1>
+    <nav>
+      <a href="index.html" class="active">Student</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Apply for Leave -->
+    <section class="card">
+      <h2>Apply for Leave</h2>
+      <form id="leaveForm">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" required>
+
+        <label for="rollNumber">Roll Number</label>
+        <input type="text" id="rollNumber" required>
+
+        <label for="department">Department</label>
+        <input type="text" id="department" placeholder="e.g. Computer Science">
+
+        <label for="fromDate">From Date</label>
+        <input type="date" id="fromDate" required>
+
+        <label for="toDate">To Date</label>
+        <input type="date" id="toDate" required>
+
+        <label for="reason">Reason</label>
+        <textarea id="reason" rows="3" required></textarea>
+
+        <button type="submit">Submit Leave Request</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <!-- Check My Leave Status -->
+    <section class="card">
+      <h2>Check My Leave Status</h2>
+      <div class="inline-form">
+        <input type="text" id="searchRoll" placeholder="Enter your Roll Number">
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <table id="myLeavesTable">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Reason</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="myLeavesBody">
+          <!-- filled by JS -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

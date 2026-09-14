@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Student Leave Management System",
+    "description": "REST API collection for testing the Student Leave Management System backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Apply for Leave",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"studentName\": \"John Doe\",\n  \"rollNumber\": \"CS101\",\n  \"department\": \"Computer Science\",\n  \"fromDate\": \"2026-09-10\",\n  \"toDate\": \"2026-09-12\",\n  \"reason\": \"Family function\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/leaves", "host": ["localhost"], "port": "8080", "path": ["api", "leaves"] }
+      }
+    },
+    {
+      "name": "Get All Leaves",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/leaves", "host": ["localhost"], "port": "8080", "path": ["api", "leaves"] }
+      }
+    },
+    {
+      "name": "Get Leave By ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/leaves/1", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "1"] }
+      }
+    },
+    {
+      "name": "Get Leaves By Roll Number",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/leaves/student/CS101", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "student", "CS101"] }
+      }
+    },
+    {
+      "name": "Approve Leave",
+      "request": {
+        "method": "PUT",
+        "url": { "raw": "http://localhost:8080/api/leaves/1/approve", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "1", "approve"] }
+      }
+    },
+    {
+      "name": "Reject Leave",
+      "request": {
+        "method": "PUT",
+        "url": { "raw": "http://localhost:8080/api/leaves/1/reject", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "1", "reject"] }
+      }
+    },
+    {
+      "name": "Update Status (generic)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"APPROVED\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/leaves/1/status", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "1", "status"] }
+      }
+    },
+    {
+      "name": "Delete Leave",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:8080/api/leaves/1", "host": ["localhost"], "port": "8080", "path": ["api", "leaves", "1"] }
+      }
+    }
+  ]
+}
