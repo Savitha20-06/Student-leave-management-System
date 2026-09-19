@@ -135,8 +135,18 @@ git branch -M main
 git remote add origin <your-github-repo-url>
 git push -u origin main
 ```
+## 6. 📸 Screenshots
 
-## 6. Deploy to AWS EC2 (Basic Steps)
+### 🎓 Leave Management
+![Leave Management](Screenshots/Management.png)
+
+### 📊 Leave Status
+![Leave Status](Screenshots/Status.png)
+
+### 👨‍🎓 Student Dashboard
+![Student Dashboard](Screenshots/Student%20.png)
+
+## 7. Deploy to AWS EC2 (Basic Steps)
 
 1. Launch an EC2 instance (Amazon Linux or Ubuntu), open ports
    **22** (SSH), **80/8080** (app), and **3306** (MySQL, if needed).
